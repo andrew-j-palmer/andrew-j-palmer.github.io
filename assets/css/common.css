@@ -1,0 +1,13 @@
+.nav-bar {
+}
+
+.nav-item {
+    width:6rem;
+    display:inline;
+    padding: 6px 12px;
+}
+
+.nav-separator {
+    display:inline;
+
+}

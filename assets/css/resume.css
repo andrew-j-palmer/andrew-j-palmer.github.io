@@ -1,0 +1,77 @@
+.Contactinfo {
+    display:block;
+    text-align: center;
+    z-index: 10;
+}
+
+.graytext {
+    color:#666666;
+    font-size: 1.4rem;
+    text-emphasis: emphasis;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+#section {
+      color: #2196F3;
+      padding: 10px 10px;
+      margin-bottom: 4px;
+}
+
+#section:hover {
+    animation-name: btnshadow;
+    animation-duration: 1s;
+    box-shadow: 2px 2px 3px #bbbbbb;
+}
+
+
+@keyframes btnshadow {
+    0% {box-shadow: 2px 2px 3px #ffffff;}
+    100% {box-shadow: 2px 2px 3px #bbbbbb;}
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+.slider {
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    flex-flow: row nowrap;
+}
+#section {
+    color:#bbbbbb !important;
+}
+#section:hover {
+    color:#2196F3 !important; 
+}
+
+.slider_inner {
+    z-index:1;
+    position: relative;
+    width: 400%;
+    height: 100%;
+    transition: left 0.4s;
+}
+
+.slider-contents {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.fadein {
+    animation-name: fading;
+    animation-direction: reverse;
+    animation-duration: .2s;
+    display: inline-block;
+}
+
+@keyframes fading {
+    0% { opacity: 1}
+    100% {opacity: 0}
+}

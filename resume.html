@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>Andrew J Palmer</title>
+    <meta name="charset" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/resume.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Connect hidden radio buttons to tab sections of document -->
+<script>
+    window.onload = function () {
+        document.getElementById('worktab').className += " fadein";
+    };
+
+    function navTabs(tabId) {
+        var divs = ['edtab','worktab','skillstab','refstab'];
+        divs.forEach(function(div){
+            if (div == tabId) {
+                document.getElementById(div).className += " fadein";
+            } else {
+                document.getElementById(div).className = "slider-contents";
+            }
+        });
+    }
+</script>
+
+    <div class="container">
+        <div class="contactinfo">
+            <h3>Andrew J Palmer</h3>
+            <div>1439 Luce</div>
+            <div>Cape Girardeau, MO 63701</div>
+            <span class="two columns offset-by-two columns">
+                <a href="tel:5732258698">573-225-8698</a>
+            </span>
+            <span class="four columns">
+                <a href="mailto:andrewjpalmer@mail.com">andrewjpalmer@mail.com</a>
+            </span>
+            <span class="four columns">
+                <a href="https://github.com/andrew-j-palmer/">Andrew-J-Palmer@GitHub</a>
+            </span>
+        </div>
+        <hr>
+        <div class="u-cf"></div>
+        <div class="three columns">
+            <label class="slider_nav" for="experience" id="section" onmouseover="navTabs('worktab')">EXPERIENCE
+                <input type="radio" class="radio" id="experience" onselect="navTabs('worktab')">
+            </label>
+        </div>
+        <div class="three columns">
+            <label class="slider_nav" for="education" id="section" onmouseover="navTabs('edtab')">EDUCATION
+                <input type="radio" class="radio" title="Education" id="education" onselect="navTabs('edtab')">
+            </label>
+        </div>
+        <div class="two columns">
+            <label class="slider_nav" for="skills" id="section" onmouseover="navTabs('skillstab')">SKILLS
+                <input type="radio" class="radio" title="Skills" id="skills" onselect="navTabs('skillstab')">
+            </label>
+        </div>
+        <div class="three columns">
+            <label class="slider_nav" for="references" id="section" onmouseover="navTabs('refstab')">REFERENCES
+                <input type="radio" class="radio" title="References" id="references" onselect="navTabs('skillstab')">
+            </label>
+        </div>
+        <div class="u-cf"></div>
+        <hr>
+        <div class="slider">
+            <div id="slider_inner">
+                <div class="slider-contents" id="worktab">
+                    <h6 id="header">WORK EXPERIENCE</h6>
+                    <ul>
+                        <li>
+                            <strong>Showcase Technologies — </strong>
+                            <em>Cape Girardeau, MO</em>
+                            <br>
+                            <strong>IDX Data Applications Specialist</strong>
+                            <br>
+                            <em class="graytext">Nov 2015 - Present</em>
+                            <article class="graytext">
+                                <ul>
+                                    <li>Expanded IDX accounts from less than five to more than fifty</li>
+                                    <li>Responsible for all aspects of IDX account management and data acquisition</li>
+                                    <li>Perform maintenance of IDX data streams, including writing custom scripts and utilities
+                                        in PHP and Bash</li>
+                                    <li>Writing in PHP and JavaScript for new products due Q3 2018</li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Southern Oil — </strong>
+                            <em>Cape Girardeau, MO</em>
+                            <br>
+                            <strong>General Manager</strong>
+                            <br>
+                            <em class="graytext">Oct 2013 - Oct 2015</em>
+                            <article class="graytext">
+                                <ul>
+                                    <li>Served as General Manager of Kingshighway Location for two years</li>
+                                    <li>Consistently met or exceeded sales goals, budget targets, and and standards scores</li>
+                                    <li>Hire, train, coach, and discipline up to 15 employees in retail, foodservice, and USPS
+                                        substation environments</li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>PAJCO, Inc — </strong>
+                            <em>Cape Girardeau, MO</em>
+                            <br>
+                            <strong>Operations Manager</strong>
+                            <br>
+                            <em class="graytext">Sept 2011 - Oct 2013</em>
+                            <article class="graytext">
+                                <ul>
+                                    <li>Assist General Managers at various locations around Cape Girardeau to meet or exceed
+                                        sales and budgetary goals</li>
+                                    <li>Hire, train, coach, and discipline up to 15 employees</li>
+                                    <li>Perform daily cash audits and weekly inventory audits</li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slider-contents" id="edtab">
+                    <h6 id="header">EDUCATION</h6>
+                    <ul>
+                        <li>
+                            <strong>Southeast Missouri State University — </strong>
+                            <em>B.A., General Studies</em>
+                            <br>
+                            <em class="graytext">Spring 2010</em>
+                            <article class="graytext">
+                                <ul>
+                                    <li>Emphasis on Music and Business</li>
+                                    <li> Served in a compensated position as captain of Southeast Drumline for two years</li>
+                                    <li>Multiple appearances as featured performer with Studio Jazz Ensemble and Southeast Percussion
+                                        Ensemble</li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slider-contents" id="skillstab">
+                    <h6 id="header">SKILLS</h6>
+                    <strong>
+                    <ul class="graytext">
+                        <li>PHP</li>
+                        <li>PHRETS</li>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>CSS/SASS</li>
+                        <li>Bash</li>
+                        <li>Ruby on Rails</li>
+                        <li>Git</li>
+                        <li>Heroku</li>
+                        <li>MS TFS</li>
+                    </ul>
+                    </strong>
+                </div>
+                <div class="slider-contents" id="refstab">
+                    <h6 id="header">REFERENCES</h6>
+                    <ul class="graytext">
+                        <li>
+                            <em>Available on request.</em>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-cf"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
