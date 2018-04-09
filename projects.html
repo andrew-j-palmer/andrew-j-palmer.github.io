@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Andrew J Palmer</title>
+    <meta name="charset" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700i" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Connect hidden radio buttons to tab sections of document -->
+    <script>
+
+        function navTabs(amt) {
+            var slides = document.getElementById('slides');
+            var newslides = slides.cloneNode(true);
+            slides.parentNode.replaceChild(newslides, slides);
+            switch (amt) {
+                case 'two':
+                    document.getElementById('slides').style.right = '100%';
+                    break;
+                case 'three':
+                    document.getElementById('slides').style.right = '200%';
+                    break;
+                case 'one':
+                    document.getElementById('slides').style.right = '0';
+                    break;
+            }
+        }
+    </script>
+    <div class="header">
+        <h1>PROJECTS</h1>
+        <caption>A few things I've been working on lately</caption>
+    </div>
+    <div class="container">
+        <div class="carousel-nav">
+            <div class="carousel-navbutton loginselector" onmouseover="navTabs('one')">L</div>
+            <div class="carousel-navbutton tickettracker" onmouseover="navTabs('two')">T</div>
+            <div class="carousel-navbutton wellactually" onmouseover="navTabs('three')">W</div>
+        </div>
+        <div class="carousel">
+            <div id="slides">
+                <div class="carousel-item one">
+                    <h1 class="loginselector carousel-title">Login Selector</h1>
+                    <p class="carousel-text">Hopefully, you securely store all of your passwords in a safe place. But what about office-wide accounts?
+                        Login selector gives you an encrypted database where you can store all your shared account information.
+                        <br>
+                        <a href="https://github.com/andrew-j-palmer/creds-manager/">Get Login Selector</a>
+                    </p>
+                    <img class="carousel-img" src="assets/images/pwdmanager.gif" alt="Login Selector in action">
+                </div>
+                <div class="carousel-item two">
+                    <h1 class="carousel-title" id="ttrac">TicketTracker.</h1>
+                    <p class="carousel-text">TicketTracker is a simple ticket system made in rails. It can be customized in minutes to adapt to customer
+                        service teams, dev teams, or just about any group project.
+                        <br>
+                        <a href="https://github.com/andrew-j-palmer/tickettracker/">Get TicketTracker</a>
+                    </p>
+                    <img class="carousel-img" src="assets/images/tickettracker.gif" alt="TicketTracker: Where Bugs go to Die">
+                </div>
+                <div class="carousel-item three">
+                    <h1 class="wellactually carousel-title">Well, *ACTUALLY...*</h1>
+                    <p class="carousel-text">At my current job, Customer Service Agents spend a LOT of time trying to find answers to questions that
+                        clients don't know or just get wrong. "Well, *ACTUALLY...*" eliminates doubt when clients aren't
+                        helpful.</p>
+                    <img class="carousel-img" src="assets/images/actually.gif">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="nav-bar">
+                <div class="nav-item">
+                    <a href="resume.html">Resume</a>
+                </div>
+                <div class="nav-separator">&#x2022;</div>
+                <div class="nav-item">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="nav-separator">&#x2022;</div>
+                <div class="nav-item">
+                    <a href="#">Interests</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

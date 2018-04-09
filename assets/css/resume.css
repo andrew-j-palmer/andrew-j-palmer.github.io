@@ -37,7 +37,8 @@ input[type=radio] {
   }
 
 .slider {
-    height: 100%;
+    width:100%;
+    min-height:100%;
     overflow: hidden;
     display: block;
     flex-flow: row nowrap;
@@ -46,20 +47,17 @@ input[type=radio] {
     color:#bbbbbb !important;
 }
 #section:hover {
-    color:#2196F3 !important; 
+    color:#0FA0CE !important; 
 }
 
 .slider_inner {
     z-index:1;
     position: relative;
-    width: 400%;
-    height: 100%;
-    transition: left 0.4s;
+    width: 100%;
 }
 
 .slider-contents {
     position: relative;
-    min-height: 100%;
     width: 100%;
     display: none;
 }
