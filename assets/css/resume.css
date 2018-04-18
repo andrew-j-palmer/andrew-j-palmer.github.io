@@ -1,3 +1,13 @@
+ .backbutton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+a.backbutton {
+    text-decoration:none !important;
+}
+
 .Contactinfo {
     display:block;
     text-align: center;
@@ -38,7 +48,7 @@ input[type=radio] {
 
 .slider {
     width:100%;
-    min-height:100%;
+    min-height:600px;
     overflow: hidden;
     display: block;
     flex-flow: row nowrap;
