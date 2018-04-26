@@ -1,11 +1,22 @@
- .backbutton {
+body {
+    background: #ffffff;
+    color: #000000;
+    margin: unset;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: wavy;
+    font-weight: 700;
+}
+
+#backbutton {
     position: absolute;
     top: 0;
     right: 0;
-}
-
-a.backbutton {
-    text-decoration:none !important;
 }
 
 .Contactinfo {

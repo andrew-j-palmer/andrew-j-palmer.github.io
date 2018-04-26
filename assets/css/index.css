@@ -6,6 +6,22 @@ body {
     margin:0px;
 }
 
+.nav-item {
+    width:6rem;
+    display:inline;
+    padding: 6px 12px;
+}
+
+.nav-separator {
+    display:inline;
+
+}
+
+.footer {
+    width: 100%;
+    min-height: 2rem;
+}
+
 p {
     font-size: 1.2rem;
     line-height: .2rem;

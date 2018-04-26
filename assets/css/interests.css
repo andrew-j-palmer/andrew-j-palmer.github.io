@@ -1,0 +1,73 @@
+a {
+    color: #222222;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgba(205, 150, 107, 0.7);
+}
+/*I had a few media queries to adjust this menu for size,
+BUT it really looks fine from 300px - 200px wide. I don't figure
+I need to worry about larger than 4K monitors*/
+
+.menu {
+    font-family: 'Playfair Display';
+    padding-left: 6px;
+    max-width: 6rem;
+    overflow: hidden;
+    display: flex;
+    color: rgba(0, 0, 0, 0.7);
+    max-height: 3rem;
+    transition: .3s ease-in;
+    border: 2px dotted rgba(205, 150, 107, 0.7);
+    border-radius: 6px;
+}
+
+.menu:hover {
+    max-width: 26rem;
+    transition: .3s ease-out;
+    color:rgba(0, 0, 0, 0.2);
+}
+
+.menuitem {
+    margin-left: 2rem;
+}
+
+.header {
+    margin-top: 8rem;
+    padding-top: 8rem;
+    background-image: url('../images/ship.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
+    text-align: center;
+    font-weight: 700;
+    height: 34rem;
+}
+.title {
+    font-family: 'Playfair Display';
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: -1px 0 rgba(255, 179, 107, 0.2), 0 1px rgba(239, 132, 30, 0.2), 1px 0 rgba(239, 132, 30, 0.2), 0 -1px rgba(239, 132, 30, 0.2)
+}
+.subtitle {
+    font-family: 'Playfair Display';
+    color: rgba(255, 255, 255, 0.6);
+    padding-top: 5rem;
+}
+
+.columns {
+    overflow: hidden;
+    max-height: 22rem;
+    padding-top: 4rem;
+}
+.thumbnail {
+    opacity: 0.8;
+    width: 100%;
+    transition: 0.4s ease-out;
+}
+
+.thumbnail:hover {
+    width: 115%;
+    opacity: 1;
+    transition: 0.6s ease-in-out;
+}
