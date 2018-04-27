@@ -30,64 +30,96 @@ Below are a few of the photos I have taken over the years. Please don't steal th
 <!-- Row 1 -->
 <div class="row">
 <div class="four columns">
-    <img src="assets/images/backporch.jpg" id="01" class="thumbnail">
+    <img src="assets/images/robins.jpg" id="11" alt="Pair of Robins fighting for the attention of a female" onclick="modalDisplay(11)" class="thumbnail">
 </div>
 <div class="four columns">
-    <img src="assets/images/bonniemakeup.jpg" id="02" class="thumbnail">
+    <img src="assets/images/bonniemakeup.jpg" id="12" alt="My Father-In-Law's wife on their wedding day in 2017" onclick="modalDisplay(12)" class="thumbnail">
 </div>
 <div class="four columns">
-    <img src="assets/images/boothill.jpg" id="03" class="thumbnail">
+    <img src="assets/images/boothill.jpg" id="13" alt="Boot Hill, Ogalala, NE" onclick="modalDisplay(13)" class="thumbnail">
 </div>
 </div>
 <!-- Row 2 -->
 <div class="row">
         <div class="four columns">
-            <img src="assets/images/buffalo.jpg" id="04" class="thumbnail">
+            <img src="assets/images/buffalo.jpg" id="14" alt="Herd of buffalo in Custer National Park, SD" onclick="modalDisplay(14)" class="thumbnail">
         </div>
         <div class="four columns">
-            <img src="assets/images/carrie.jpg" id="05" class="thumbnail">
+            <img src="assets/images/carrie.jpg" id="15" alt="My wife, Carrie, at the Beach in Gulf Shores, AL" onclick="modalDisplay(15)" class="thumbnail">
         </div>
         <div class="four columns">
-            <img src="assets/images/cora.jpg" id="06" class="thumbnail">
+            <img src="assets/images/cora.jpg" id="16" alt="Little Cora is tired of getting her picture taken" onclick="modalDisplay(16)" class="thumbnail u-pull-right">
         </div>
         </div>
 
 <!-- Row 3 -->
 <div class="row">
         <div class="four columns">
-            <img src="assets/images/eclipse.jpg" id="07" class="thumbnail">
+            <img src="assets/images/eclipse.jpg" id="17" alt="Eclipse 'Time Lapse' from last summer" onclick="modalDisplay(17)" class="thumbnail">
         </div>
         <div class="four columns">
-            <img src="assets/images/ecstacy.jpg" id="08" class="thumbnail">
+            <img src="assets/images/ecstacy.jpg" id="18" alt="The Spirit of Ecstacy" onclick="modalDisplay(18)" class="thumbnail u-pull-right">
         </div>
         <div class="four columns">
-            <img src="assets/images/fishermen.jpg" id="09" class="thumbnail">
+            <img src="assets/images/fishermen.jpg" id="19" alt="Fisherman in Skull Harbor, Orange Beach, AL" onclick="modalDisplay(19)"class="thumbnail">
         </div>
 </div>
 <!-- Row 4 -->
 <div class="row">
         <div class="four columns">
-            <img src="assets/images/giraffe.jpg" id="10" class="thumbnail">
+            <img src="assets/images/giraffe.jpg" id="20" alt="Giraffe skull at The Pink Palace Museum, Memphis, TN" onclick="modalDisplay(20)" class="thumbnail u-pull-right">
         </div>
         <div class="four columns">
-            <img src="assets/images/gull.jpg" id="11" class="thumbnail">
+            <img src="assets/images/gull.jpg" id="21" alt="Gull just hanging out in Fort Morgan, AL" onclick="modalDisplay(21)"class="thumbnail u-pull-right">
         </div>
         <div class="four columns">
-            <img src="assets/images/josh.jpg" id="12" class="thumbnail">
+            <img src="assets/images/josh.jpg" id="22" alt="An old friend of mine. I was playing around with junk glass bought off of eBay" onclick="modalDisplay(22)" class="thumbnail">
         </div>
 </div>
 <!-- Row 5 -->
 <div class="row">
         <div class="four columns">
-            <img src="assets/images/kyle.jpg" id="13" class="thumbnail">
+            <img src="assets/images/kyle.jpg" id="23" alt="Another old friend" onclick="modalDisplay(23)"class="thumbnail">
         </div>
         <div class="four columns">
-            <img src="assets/images/omd.jpg" id="14" class="thumbnail">
+            <img src="assets/images/omd.jpg" id="24" alt="My Favorite Camera as of late. I'm a big fan of the Micro 4/3ds format" onclick="modalDisplay(24)" class="thumbnail u-pull-right">
         </div>
         <div class="four columns">
-            <img src="assets/images/pastrana.jpg" id="15" class="thumbnail">
+            <img src="assets/images/pastrana.jpg" alt="Travis Pastrana's STI at Rally in The Hundred Acre Wood" id="25" onclick="modalDisplay(25)" class="thumbnail">
         </div>
 </div>
 </div>
+
+
+<!-- modal to display bigger pictures-->
+<div id="imgModal" class="modal">
+
+        <!-- click just about anywhere to close -->
+        <span class="close"></span>
+        <h6 id="modaltext"></h6>      
+        <!-- Img tag to be filled with content from thumb -->
+        <img class="bigimage" id="img">
+
+</div>
+<script>
+        // Modal for large views of screenshot
+        //first one puts entire modal div into var
+        function modalDisplay(passedID) {
+            var modal = document.getElementById('imgModal');
+        // grab thumbnail, set it as src for modal image tag
+            var img = document.getElementById(passedID);
+            var modalImg = document.getElementById('img');
+            var caption = document.getElementById('modaltext');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            caption.innerHTML = img.alt;
+        }
+        
+        // get ready to use "X" to close modal
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            document.getElementById('imgModal').style.display = "none";
+        }
+        </script>
 </body>
 </html>
