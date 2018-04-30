@@ -72,33 +72,34 @@ I need to worry about larger than 4K monitors*/
     transition: 0.6s ease-in-out;
 }
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 15; /* Sit on top */
-    padding-top: 3rem; /* Location of the box */
+    display: none; /* hide by default */
+    position: fixed;
+    z-index: 15;
+    padding-top: 3rem;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
 }
-/* Image on modal */
+
 .bigimage, #modaltext {
     text-align: center;
     color:#fff;
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    max-width: 80%;
+    max-height: 80%;
     animation-name: zoom;
     animation-duration: 0.3s;
 }
+
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
+
 .close {
     box-sizing: border-box;
     position: absolute;
@@ -108,9 +109,10 @@ I need to worry about larger than 4K monitors*/
     font-weight: bold;
     transition: 0.2s;
 }
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
+
+@media only screen and (max-width: 600px){
+    .bigimage   {
+        max-width: 95%;
+        max-height: 90%;
     }
 }
