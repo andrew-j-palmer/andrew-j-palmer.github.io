@@ -7,7 +7,7 @@ a:hover {
     color:rgba(205, 150, 107, 0.7);
 }
 /*I had a few media queries to adjust this menu for size,
-BUT it really looks fine from 300px - 200px wide. I don't figure
+BUT it really looks fine from 300px - 2000px wide. I don't figure
 I need to worry about larger than 4K monitors*/
 
 .menu {
