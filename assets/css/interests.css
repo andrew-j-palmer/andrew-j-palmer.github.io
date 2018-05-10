@@ -34,42 +34,45 @@ I need to worry about larger than 4K monitors*/
 }
 
 .header {
-    margin-top: 8rem;
-    padding-top: 8rem;
     background-image: url('../images/ship.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position-y: center;
     text-align: center;
     font-weight: 700;
-    height: 34rem;
 }
+
 .title {
+    border: 2rem #000 solid;
+    margin-top: 6rem;
+    padding-top: 6rem;
+    height: 100%;
+    background: rgba(253, 226, 197, 0.7);
     font-family: 'Playfair Display';
-    color: rgba(0, 0, 0, 0.6);
-    text-shadow: -1px 0 rgba(255, 179, 107, 0.2), 0 1px rgba(239, 132, 30, 0.2), 1px 0 rgba(239, 132, 30, 0.2), 0 -1px rgba(239, 132, 30, 0.2)
+    color: #000000;
+    mix-blend-mode: screen;
 }
 .subtitle {
     font-family: 'Playfair Display';
-    color: rgba(255, 255, 255, 0.6);
-    padding-top: 5rem;
+    color: rgba(0, 0, 0, 0.7);
+    padding-top: 3rem;
 }
 
 .columns {
     overflow: hidden;
-    max-height: 22rem;
+    max-height: 24rem;
     padding-top: 4rem;
 }
 .thumbnail {
     opacity: 0.8;
     width: 100%;
-    transition: 0.4s ease-out;
+    transition: 0.2s ease-out;
 }
 
 .thumbnail:hover {
-    width: 120%;
+    width: 115%;
     opacity: 1;
-    transition: 0.6s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .modal {
     display: none; /* hide by default */
