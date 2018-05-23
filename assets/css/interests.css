@@ -70,7 +70,7 @@ I need to worry about larger than 4K monitors*/
 }
 
 .thumbnail:hover {
-    width: 115%;
+    width: 110%;
     opacity: 1;
     transition: 0.2s ease-in-out;
 }
