@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body style="background: linear-gradient(40deg, #002 20%, #102 60%, #104 80%); min-height: 100vh; overflow: hidden;">
+    <style>
+        .nebula {
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('file:///home/andy/bin/andrew-j-palmer.github.io/assets/images/nebula.png');
+        }
+        a {
+            color: #333;
+            filter: drop-shadow(2px 4px #222);
+        }
+
+        .title {
+            position: absolute;
+            size: 4em;
+            color: #fff;
+            top: 1em;
+            left: 1em;
+        }
+        .cube {
+            font-size: 6em;
+            width: 4em;
+            margin: auto;
+            perspective: 1500px;
+        }
+        .spinning {
+            animation: rotate 12s ease-in-out infinite;
+        }
+        .side {
+            border: 1px solid #fff;
+            position: absolute;
+            width: 4em;
+            height: 6em;
+            text-align: center;
+            padding-top: 2em;
+        }
+        .one {
+            transform: translateZ(-2em);
+        }
+        .two {
+            transform: rotateY(60deg) translateZ(-1.73em);
+        }
+        .three {
+            transform: rotateY(-60deg) translateZ(-1.73em);
+        }
+        .side :hover {
+            color: #fff;
+        }
+        @keyframes rotate {
+            0% {transform: rotateX(-6deg) rotateY(3deg)}
+            10% {transform: rotateX(-3deg) rotateY(6deg)}
+            20% {transform: rotateX(0deg) rotateY(3deg)}
+            30% {transform: rotateX(3deg) rotateY(0deg)}
+            40% {transform: rotateX(6deg) rotateY(-3deg)}
+            50% {transform: rotateX(9deg) rotateY(-6deg)}
+            60% {transform: rotateX(3deg) rotateY(-3deg)}
+            70% {transform: rotateX(0deg) rotateY(0deg)}
+            80% {transform: rotateX(-3deg) rotateY(3deg)}
+            90% {transform: rotateX(-6deg) rotateY(6deg)}
+            100% {transform: rotateX(-3deg) rotateY(3deg)}
+        }
+    </style>
+    <div class="title">ANDREW PALMER</div>
+    <div class="container">
+        <div class="nebula"></div>
+        <div class="cube spinning">
+            <div class="side one"><a href="#"><i class="fab fa-github"></i>GITHUB</a></div>
+            <div class="side two"><a href="#"><i class="fas fa-at"></i>EMAIL</a></div>
+            <div class="side three"><a href="#"><i class="fas fa-address-card"></i>ME</a></div>
+        </div>
+    </div>
+    <script>
+        var cube = document.querySelector('.cube')
+        cube.addEventListener("mousemove", rotor);
+        cube.addEventListener("mouseout", resume);
+        
+        function rotor(e) {
+            var cube = document.querySelector('.cube');
+            //cube.style.animationPlayState = 'paused';
+            cube.classList = 'cube';
+            var middle = cube.clientWidth / 2;
+            var x = ( e.pageX - middle ) / 12;
+            cube.style.transform = 'rotateY(' + x + 'deg)'; 
+        }
+
+        function resume() {
+            document.querySelector('.cube').classList += ' spinning';
+            //document.querySelector('.cube').style.animationPlayState = 'running';
+        }
+    </script>
+  </body>
+</html>
