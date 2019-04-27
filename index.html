@@ -8,50 +8,144 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">   
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600|Kanit:300,600" rel="stylesheet">   
 </head>
 
 <body>
-    <div class="header">
+    <div class="mobilenav">
+        <i class="fas fa-bars" id="hamburger"></i>
+        <div class="mobilenav-item"><a href="#about">ABOUT</a></div>
+        <div class="mobilenav-item"><a href="#projects">PROJECTS</a></div>
+        <div class="mobilenav-item"><a href="resume.html">RESUMÉ</a></div>
+    </div>
+    <header>
         <h1 class="titletext">Andrew J Palmer</h1>
-        <div id="nav-bar">
-            <div class="nav-item">
+        <nav class="nav">
+            <span class="nav-item">
+                <a href="#about">About</a>
+            </span>
+            <span class="nav-item">
+                <a href="#projects">Projects</a>
+            </span>
+            <span class="nav-item">
                 <a href="resume.html">Resumé</a>
-            </div>
-            <div class="nav-separator">&#x2022;</div>
-            <div class="nav-item">
-                <a href="projects.html">Projects</a>
-            </div>
-            <div class="nav-separator">&#x2022;</div>
-            <div class="nav-item">
-                <a href="interests.html">Interests</a>
+            </span>
+        </nav>
+    </header>
+    <div class="punchline">
+        <div class="backdrop">
+            <div class="card card1">FRONT END DEV</div>
+            <div class="card card2">BACK END DEV</div>
+            <div class="card card3">DB ADMIN</div>
+            <div class="card card4">
+                <a href="mailto:andrewjpalmer@mail.com">
+                    <i class="fas fa-envelope-square"></i> 
+                <a href="https://github.com/andrew-j-palmer/">
+                    <i class="fab fa-github"></i> 
+                </a>
             </div>
         </div>
     </div>
-    <div class="bodydiv colorful">
-        <div id="Punchline">
+    <div class="container">
+        <section id="about">
+            <h3>Well, hello there!</h2>
+            <img src="assets/images/andyatcomputer.jpg" class="headshot u-pull-left two columns">
+            <p>
+                My name is Andrew Palmer. I am a full-stack developer based in Cape Girardeau, Missouri.
+                I certainly didn't take the traditional career route to web development; while I did some
+                programming in high school and wrote HTML in the dial-up days of the web, I never dreamed of 
+                doing so professionally until just a few years ago. 
+            </p>
+            <p>
+                In 2015, I left my job managing a convenience store to take a tech support position 
+                for a Real Estate Marketing company. Within six months, I had been promoted to a role that involved 
+                some simple PHP scripting and database management, and in late 2017, I earned a spot on the development team 
+                developing new products. I am always on the lookout for new challeneges, and haven't met a language or 
+                library yet that scared me. <br>Except maybe JavaScript. <sup style="font-size: 1.2rem; color: #666;">(ha ha)</sup>
+            </p>
+        </section>
+        <section>
+            <h3 id="projects">What I've Been Up To</h3>
+            <h6>A Few Recent Projects</h6>
+            <hr>
+            <h4 class="project">Carriemcclard.com</h4>
+            <div class="icons">
+                <img src="assets/svg/html.svg">
+                <img src="assets/svg/css.svg">
+                <img src="assets/svg/js.svg">
+            </div>
+            <img src="assets/images/mcclard.jpg" class="u-pull-right six columns">
+            <ul>
+                <li>Mobile First Design</li>
+                <li>Lightweight at 1.4MB (including all sizes of background image)</li>
+                <li>Hosted on the amazing Netlify</li>
+            </ul>
+            <p>
+                My wife needed a website for her hairstylist business that suited her personal taste, 
+                and would have real functionality that would help her manage clients. She was very happy 
+                with the result! On a near daily basis, clients tell her they appreciate the site (and online booking).
+            </p>
+            <div class="editor"><span class="linenum">88</span>/*TODO: Integrate Square API into the site instead of linking out*/<span class="blink">&nbsp;</span></div>
 
-            <h1><strong>Web Dev / DB Admin / Media Creator</strong></h2>
-            <h1><strong>Cape Girardeau, Missouri</strong></h2>
-        </div>
-    </div>
+            <hr>
+            <h4 class="project">TicketTracker.</h4>
+            <div class="icons">
+                <img src="assets/svg/rails.svg">
+                <img src="assets/svg/html.svg">
+                <img src="assets/svg/sass.svg">
+                <img src="assets/svg/js.svg">
+            </div>
+            <img src="assets/images/tickettracker.gif" class="u-pull-right six columns">
+            <ul>
+                <li>Final project for MTI's Code Labs One</li>
+                <li>Rails Web App with PostGreS replaced by MySQL</li>
+                <li>Optimized with Cloudinary for deployment on Heroku</li>
+            </ul>
+            <p>
+                This was a fun one. As a graduation requirement of the Code Labs One bootcamp, we had to make a web app of our
+                choosing, so I settled on making a simple ticket system. About a month later, I had an anachronisticly styled, 
+                MySQL-driven Rails app that is surprisingly customizable for use in tech support, development, or really anywhere 
+                that you might use a Trello board. Tickets support adding screenshots, can be commented on by other users (but only 
+                edited by the original user or Admin), and are automatically archived when the ticket is marked as 'Closed.' My 
+                favorite part of this project besides Rails itself, which is FABULOUS for rapid prototyping, was the fact 
+                that as I progressed, I was actually able to use TicketTracker to document it's own development.
+            </p>
+            <div class="editor"><span class="linenum">113</span>/*TODO: Add drag 'n drop to move tickets from one status to ano<span class="blink">t</span>her */</div>
 
-    <div class="footer">
-        <div class="contactinfo">
-            <a href="mailto:andrewjpalmer@mail.com">
-                <i class="fas fa-envelope-square"></i> 
-                andrewjpalmer at mail.com</a>
-            <span> &#x2022; </span>
-            <a href="https://github.com/andrew-j-palmer/">
-                <i class="fab fa-github"></i> 
-                Andrew-J-Palmer@GitHub
-            </a>
-        </div>
-        <div class="three columns"></div>
-        <div class="u-cf"></div><br>
-        <p>This site uses <a href="http://getskeleton.com/">Skeleton Framework</a> by <a href=" http://davegamache.com/">Dave Gamache</a>.</p>
-        <p>SVG background created at <a href="https://www.svgbackgrounds.com">SVGBackgrounds.com</a>.</p>
-        
+            <hr>
+            <h4 class="project">PROVISITY</h4>
+            <div class="icons">
+                <img src="assets/svg/php.svg">
+                <img src="assets/svg/js.svg">
+                <img src="assets/svg/jquery.svg">
+                <img src="assets/svg/html.svg">
+                <img src="assets/svg/mysql.svg">
+            </div>
+            <img src="assets/images/fishermen.jpg" class="u-pull-right six columns">
+            <ul>
+                <li>Real Estate Marketing SaaS Suite</li>
+                <li>Automated generation of several types of media</li>
+                <li>Extensive use of Google and Facebook APIs</li>
+                <li>Multiple types of Real Estate Listing Data Aggregation</li>
+            </ul>
+            <p>
+                My firm has been involved in Real Estate Marketing for decades now, going back to when it was popular 
+                for Realtors to have cable access shows highlighting their listings for the week. In 2019 that trend is 
+                thankfully dead, and we are proud to have helped kill it. There are too many things to list here: PDF Flyers 
+                using TCPDF, virtual tours and agent marketing spots created in JQuery and vanilla JavaScript, Social Media 
+                sharing tools, and on and on. I have had numerous front-end and UI assignments in this project, and singlehandedly 
+                designed the modular MLS data aggregation tool that ensures Realtors don't have to type a single word or upload a 
+                single photo to create their customized marketing tools.
+            </p>
+            <div class="editor"><span class="linenum">141</span><span class="blink">/</span>*TODO: merge refactored JS flyer editor into 
+            DEV/MAIN branch*/</div>
+
+        </section>
+        <footer>
+            <p>This site uses <a href="http://getskeleton.com/">Skeleton Framework</a> by <a href=" http://davegamache.com/">Dave Gamache</a>.</p>
+            <p>No other JS or CSS libraries. I'm a glutton for punishment.</p>
+        </footer>
     </div>
 </body>
 

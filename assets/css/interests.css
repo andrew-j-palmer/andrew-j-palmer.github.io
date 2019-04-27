@@ -1,10 +1,14 @@
+body {
+    background: #5e5e5f;
+}
+
 a {
     color: #222222;
     text-decoration: none;
 }
 
 a:hover {
-    color:rgba(205, 150, 107, 0.7);
+    color:rgb(205, 150, 107);
 }
 /*I had a few media queries to adjust this menu for size,
 BUT it really looks fine from 300px - 2000px wide. I don't figure
@@ -16,17 +20,21 @@ I need to worry about larger than 4K monitors*/
     max-width: 6rem;
     overflow: hidden;
     display: flex;
-    color: rgba(0, 0, 0, 0.7);
+    color: #fff;
     max-height: 3rem;
-    transition: .3s ease-in;
-    border: 2px dotted rgba(205, 150, 107, 0.7);
+    transition: .1s ease-in;
+    border: 1px solid #aaaaaa;
     border-radius: 6px;
+    user-select: none;
 }
 
 .menu:hover {
+    border: 1px solid #666666;
+    background: #eeeddd;
     max-width: 26rem;
     transition: .3s ease-out;
-    color:rgba(0, 0, 0, 0.2);
+    color:rgba(205, 150, 107, 0.7);
+    filter: drop-shadow(2px 2px 6px #333333);
 }
 
 .menuitem {
@@ -36,10 +44,10 @@ I need to worry about larger than 4K monitors*/
 .header {
     background-image: url('../images/ship.jpg');
     background-size: cover;
-    background-attachment: fixed;
-    background-position-y: center;
+    background-position: 50% 10%;
     text-align: center;
     font-weight: 700;
+    margin: 4rem 0;
 }
 
 .title {
@@ -52,17 +60,34 @@ I need to worry about larger than 4K monitors*/
     color: #000000;
     mix-blend-mode: screen;
 }
+
 .subtitle {
     font-family: 'Playfair Display';
     color: rgba(0, 0, 0, 0.7);
     padding-top: 3rem;
 }
 
+.card {
+    background: #eeeddd;
+    padding: 8rem;
+    margin: 2rem;
+    border-radius: 6px;
+    border: 1px solid #666666;
+    filter: drop-shadow(2px 2px 6px #333333);
+}
+
+@media only screen and (max-width: 500px) {
+    .card {padding: 2rem; margin: 0;}
+    .columns {height: 12rem;}
+    .container {padding: 0;}
+}
+
 .columns {
     overflow: hidden;
-    max-height: 24rem;
+    height: 24rem;
     padding-top: 4rem;
 }
+
 .thumbnail {
     opacity: 0.8;
     width: 100%;
