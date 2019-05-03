@@ -38,11 +38,11 @@ body {
     margin-top: 5rem;
     transition: .1s ease-out;
     overflow: visible;
-    border: 6px solid #6674be; border-top: none;
-    background: #fff;
+    border: 6px solid #11da8d; border-top: none;
+    background: #ffffff;
 }
 
-.mobilenav:nth-child(1):hover { color: #fff; }
+#hamburger:hover { color: transparent; }
 
 .mobilenav-item {
     font-size: 2rem;
@@ -59,31 +59,34 @@ p {
 }
 
 a {
-    color: #6674be;
+    color: #11da8d;
     font-weight: 600;
     text-decoration: none;
 }
 
 a:hover, .card a:hover {
-    color: #1eaedb;
+    color: #1edbb2;
 }
 
 header {
-    padding: 3rem 1rem 0rem;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     max-height: 12rem;
-    background: #fff;
+    background: #ffffff;
     z-index: 2;
+    transition-duration: 1s;
 }
 
 hr {
     margin-bottom: 0;
 }
 
+h4 { margin-bottom: 4rem; }
+
 .titletext {
     font-size: 6rem;
+    margin: 1rem;
 }
 
 .punchline {
@@ -92,10 +95,8 @@ hr {
     width: 100%;
     position: relative;
     overflow:hidden;
-    margin-top: 12rem;
-    background: linear-gradient(to top right,#1d1d29, 80%, #6674be);
-    background-color: #1d1d29;
-    z-index: 0;
+    background: linear-gradient(to top right,#4a4a5e, 60%, #286d52);
+    background-color: #4a4a5e;
 }
 
 .backdrop {
@@ -120,7 +121,6 @@ hr {
     100% { right: 0; top: -100%; transform: scaleY(1); filter: blur(0px); }
 }
 
-
 @keyframes intro-mobile {
     0% { right: 100%; top: -100%; }
     30% { right: 100%; top: -100%; }
@@ -134,6 +134,7 @@ hr {
 .headshot {
     border-radius: 12px;
     margin-right: 1rem;
+    filter: drop-shadow(3px 3px 3px #cccccc);
 }
 
 .card {
@@ -146,20 +147,8 @@ hr {
     text-align: center;
 }
 
-@media screen and (max-width: 400px) {
-    header { padding: 1rem 0 1rem; border-bottom: 6px solid #6674be; }
-    .headshot { max-width: 40%; }
-    .mobilenav { display: block; }
-    .mobilenav:hover { border: 4px solid #6674be; border-top: none; border-radius: 4px; }
-    .nav { display: none; }
-    .titletext { font-size: 3rem; margin: 0 0 0 2rem; }
-    .card { font-size: 4rem; padding-top: 1rem; }
-    .punchline { margin-top: 6rem; height: 10rem; }
-    .backdrop { animation: intro-mobile 5s ease-in-out 0s 1 forwards; }
-}
-
 .card a {
-    color: #fff;
+    color: #ffffff;
 }
 
 .card1 {
@@ -178,29 +167,22 @@ hr {
 }
 
 .card4 {
-    padding-top: 0.4rem;
-    font-size: 6rem;
     left: 0;
     top: 100%;
+    text-align: center;
 }
 
-.card4 a {
-    margin: 0 2rem 0 2rem;
-}
-
-@media screen and (min-width: 550px) {
-    .card4 { font-size: 12rem; }
+.card4 div {
+    padding: 2rem 4rem;
 }
 
 .editor {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.4rem;
-    background: #444;
+    background: #444444;
     color: #33bb44;
     border-radius: 4px;
     margin-bottom: 6rem;
-    text-indent: -4rem;
-    padding-left: 4rem;
 }
 
 .blink {
@@ -211,34 +193,115 @@ hr {
     color: #aaa;
     font-size: 1.2rem;
     padding: 0 2rem 0 0.6rem;
+    display: inline;
 }
 
 @keyframes blink {
-    from { background: #444; color: #33bb44; }
-    to { background: #66ff66; color: #000; }
+    from { background: #444444; color: #33bb44; }
+    to { background: #66ff66; color: #000000; }
+}
+
+.carrie a {
+    color: #6D262C;
+}
+
+header.carrie, .mobilenav.carrie:hover {
+    background: #6D262C;
+    color: #ffffff;
+    border-color: #D6743F;
+}
+
+header.carrie a, .mobilenav.carrie a {
+    color: #DCCB7a;
+}
+
+.carriescript {
+    font-family: 'Calligraffitti', cursive;
+}
+
+.ticketscript a, header.ticket h1 {
+    color: #656659;
+    text-shadow: 2px 2px 2px #f5e594;
+}
+
+header.ticket, .mobilenav.ticket:hover {
+    background: #e2c6a4;
+    border-color: #656659;
+}
+
+header.ticket a, .mobilenav.ticket a {
+    color: #222222;
+}
+
+.ticketscript {
+    font-family: 'Playfair Display', serif;
+}
+
+.provisity {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    letter-spacing: 6px;
+    transform: scaleY(1.4);
+}
+
+.provisity a {
+    color: #223322;
+}
+
+.pro, .mobilenav.pro:hover {
+    background: #ffffff;
+    color: #534e49;
+    border-color: #223322; 
+}
+
+.pro a {
+    color: #009775;
 }
 
 .project {
     font-weight: 600;
-    color: #6674be;
+    filter: drop-shadow(2px 2px 4px #ddd);
+    transition: 1s;
 }
 
 .icons {
-    float: right;
-    margin-top: -4rem;
+    margin-top: -2rem;
 }
 
 .icons img {
     width: 3rem;
-    padding: 0.6rem;
+    padding: 0 0.6rem 1rem;
     filter: drop-shadow(3px 3px 3px #ccc);
 }
 
-#about::before, #projects::before {
-    display: block; 
-    content: " "; 
-    margin-top: -14.6rem; 
-    height: 14.6rem; 
-    visibility: hidden; 
-    pointer-events: none;
+#projects {
+    border-top: 10.6rem solid transparent;
+    margin-top: -10.6rem;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
 }
+
+@media screen and (max-width: 400px) {
+    header { padding: 1rem 0 1rem; border-bottom: 6px solid #11da8d; }
+    .headshot { max-width: 40%; }
+    .mobilenav { display: block; }
+    .mobilenav:hover { border: 4px solid #11da8d; border-top: none; border-radius: 4px; }
+    .nav { display: none; }
+    .titletext { font-size: 3rem; margin: 0 0 0 2rem; }
+    .card { font-size: 4rem; padding-top: 1rem; }
+    .card4 { padding: 0.4rem 0; font-size: 6rem;}
+    .punchline { height: 10rem; }
+    .backdrop { animation: intro-mobile 5s ease-in-out 0s 1 forwards; }
+    .linenum { display: none; }
+    #projects { border-top: 9rem solid transparent; margin-top: -9rem; }
+}
+
+@media screen and (min-width: 550px) {
+    .card4 { font-size: 12rem; }
+    .editor { text-indent: -4rem; padding-left: 4rem; }
+}
+
+@media screen and (min-width: 800px) {
+    .icons img { width: 3.6rem; }
+}
+
