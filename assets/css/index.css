@@ -49,6 +49,12 @@ body {
     padding: 0.5rem;
 }
 
+footer::before {
+    display: block;
+    content: '';
+    height: 14rem;
+}
+
 footer p {
     font-size: 1.2rem;
     margin-bottom: 0;
@@ -259,7 +265,6 @@ header.ticket a, .mobilenav.ticket a {
 }
 
 .project {
-    font-weight: 600;
     filter: drop-shadow(2px 2px 4px #ddd);
     transition: 1s;
 }
@@ -281,6 +286,36 @@ header.ticket a, .mobilenav.ticket a {
     background-clip: content-box;
 }
 
+#contact {
+    display: inline;
+}
+
+.contact a {
+    padding: 5%;
+    margin-top: 2rem;
+    font-size: 4rem;
+    filter: drop-shadow(2px 2px 1px #dddddd);
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.call a {
+    color: #9bda37;
+}
+
+.text a {
+    color: #c872d3;
+}
+
+.email a {
+    color: #f5b326;
+}
+
+.fb a {
+    color: #0078ff;
+}
+
+
 @media screen and (max-width: 400px) {
     header { padding: 1rem 0 1rem; border-bottom: 6px solid #11da8d; }
     .headshot { max-width: 40%; }
@@ -299,9 +334,10 @@ header.ticket a, .mobilenav.ticket a {
 @media screen and (min-width: 550px) {
     .card4 { font-size: 12rem; }
     .editor { text-indent: -4rem; padding-left: 4rem; }
+    .contact a { padding: 7.5%; }
 }
 
 @media screen and (min-width: 800px) {
     .icons img { width: 3.6rem; }
+    .contact a { padding: 10%; }
 }
-

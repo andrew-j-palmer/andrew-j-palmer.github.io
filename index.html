@@ -17,6 +17,7 @@
         <i class="fas fa-bars" id="hamburger"></i>
         <div class="mobilenav-item"><a href="#top">TOP</a></div>
         <div class="mobilenav-item"><a href="#projects">PROJECTS</a></div>
+        <div class="mobilenav-item"><a href="#contact">CONTACT</a></div>
         <div class="mobilenav-item"><a href="resume.html" target="_blank">RESUMÉ</a></div>
     </div>
     <header>
@@ -27,6 +28,9 @@
             </span>
             <span class="nav-item">
                 <a href="#projects">Projects</a>
+            </span>
+            <span class="nav-item">
+                <a href="#contact">Contact</a>
             </span>
             <span class="nav-item">
                 <a href="resume.html" target="_blank">Resumé</a>
@@ -89,7 +93,7 @@
                     and would have real functionality that would help her manage clients. She was very happy 
                     with the result! On a near daily basis, clients tell her they appreciate the site (and online booking).
                 </p>
-                <div class="editor"><span class="linenum">88</span>/*TODO: Integrate Square API into the site instead of linking out*/<span class="blink">&nbsp;</span></div>
+                <div class="editor"><span class="linenum">92</span>/*TODO: Integrate Square API into the site instead of linking out*/<span class="blink">&nbsp;</span></div>
 
             </div>
             <div class="project">
@@ -105,19 +109,19 @@
                 <ul>
                     <li>Final project for MTI's Code Labs One</li>
                     <li>Rails Web App with PostGreS replaced by MySQL</li>
-                    <li>Optimized with Cloudinary for deployment on Heroku</li>
+                    <li>Coudinary Integration for use with containerized deployment</li>
                     <li><a href="https://peaceful-thicket-62541.herokuapp.com/session/new" target="_blank">Demo running on Heroku,</a> login as guest@guest.com , pass 'Test123'</li>
                 </ul>
                 <p>
                     This was a fun one. As a graduation requirement of the Code Labs One bootcamp, we had to make a web app of our
-                    choosing, so I settled on making a simple ticket system. About a month later, I had an anachronisticly styled, 
+                    choosing, so I settled on making a simple ticket system. After about a month of work, I had an anachronisticly styled, 
                     MySQL-driven Rails app that is surprisingly customizable for use in tech support, development, or really anywhere 
                     that you might use a Trello board. Tickets support adding screenshots, can be commented on by other users (but only 
                     edited by the original user or Admin), and are automatically archived when the ticket is marked as 'Closed.' My 
                     favorite part of this project besides Rails itself, which is FABULOUS for rapid prototyping, was the fact 
                     that as I progressed, I was actually able to use TicketTracker to document it's own development.
                 </p>
-                <div class="editor"><span class="linenum">113</span>/*TODO: Add drag 'n drop to move tickets from one status to ano<span class="blink">t</span>her */</div>
+                <div class="editor"><span class="linenum">120</span>/*TODO: Add drag 'n drop to move tickets from one status to ano<span class="blink">t</span>her */</div>
 
             </div>
             <div class="project">
@@ -126,6 +130,7 @@
                 <div class="icons">
                     <img src="assets/svg/php.svg">
                     <img src="assets/svg/js.svg">
+                    <img src="assets/svg/bootstrap.svg">
                     <img src="assets/svg/jquery.svg">
                     <img src="assets/svg/html.svg">
                     <img src="assets/svg/mysql.svg">
@@ -146,9 +151,35 @@
                     designed the modular MLS data aggregation tool that ensures Realtors don't have to type a single word or upload a 
                     single photo to create their customized marketing tools.
                 </p>
-                <div class="editor"><span class="linenum">141</span><span class="blink">/</span>*TODO: merge refactored JS flyer editor into 
+                <div class="editor"><span class="linenum">149</span><span class="blink">/</span>*TODO: merge refactored JS flyer editor into 
                 DEV/MAIN branch*/</div>
             </div>
+        </section>
+        <section id="contact">
+            <hr>
+            <h2>Let's Talk!</h2>
+            <p>I am interested in working on projects of all sorts. If you have a project that you think I would be a good fit for, drop me a line!</p>
+            <span class="call contact">
+                <a href="tel:5732258698">
+                    <i class="fas fa-mobile-alt"></i>
+                </a>
+            </span>
+            <span class="text contact">
+                <a href="sms:5732258698;?&body=Hi, Andrew! I was checking out your site, and was interested in working with you on a project.">
+                    <i class="fas fa-comment-dots"></i>
+                </a>
+            </span>
+            <span class="email contact">
+                <a href="mailto:andrewjpalmer@mail.com?subject=Checking Out Your Website&body=Hi Andrew! I was checking our your website, and was interested in working with you on a project.">
+                    <i class="fas fa-at"></i>
+                </a>
+            </span>
+            <span class="fb contact">
+                <a href="https://m.me/Apalmer822">
+                    <i class="fab fa-facebook-messenger"></i>
+                </a>
+            </span>            
+            <hr>
         </section>
         <footer>
             <p>This site uses <a href="http://getskeleton.com/">Skeleton Framework</a> by <a href=" http://davegamache.com/">Dave Gamache</a>.</p>
@@ -165,8 +196,9 @@
             var carrie = elements[0].offsetTop;
             var tickets = elements[1].offsetTop;
             var pro = elements[2].offsetTop;
+            var contact = document.getElementById("contact");
 
-            if (scrolling >= end || scrolling < carrie) {
+            if (scrolling >= contact.offsetTop || scrolling < carrie) {
                 head.classList = '';
                     mobile.classList = 'mobilenav';
             } else {
@@ -183,6 +215,12 @@
                     mobile.classList = 'mobilenav pro';
                 }
             }
+            if (scrolling > contact.offsetTop) {
+                    var count = 50;
+                    contact.querySelectorAll('.contact a').forEach(function(e) {
+                        setTimeout(function(){ e.style.opacity="1"; e.style.transitionDelay= count + 'ms'; count += 250; }, 250);
+                    });
+                }
         });
     </script>
 </body>
