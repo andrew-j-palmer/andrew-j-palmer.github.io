@@ -221,8 +221,30 @@
                         setTimeout(function(){ e.style.opacity="1"; e.style.transitionDelay= count + 'ms'; count += 250; }, 250);
                     });
                 }
-        });
+        }, false);
+
+        //mobile menu control
+        let menu = document.querySelector('.mobilenav');
+        let title = document.querySelector('.titletext');
+        menu.addEventListener('touchend', function(e) {
+
+            if (!menu.classList.contains('hover')) {
+            menu.classList.add('hover');
+            } else if (menu.children.indexOf(e.target) != -1) {
+                //clicked a link in menu
+            } else {
+                menu.classList.remove('hover');
+            }
+            e.stopPropagation();
+        }, false);
+
+        document.addEventListener('touchstart', function(e) {
+            if (e.srcElement.classList.contains('mobilenav') || e.srcElement.classList.contains('mobilenav-item') || e.srcElement.id == 'hamburger') {
+                menu.classList.remove('hover');
+            }
+        }, false);
     </script>
+
 </body>
 
 </html>
