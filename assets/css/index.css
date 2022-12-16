@@ -311,10 +311,6 @@ header.ticket a, .mobilenav.ticket a {
     color: #f5b326;
 }
 
-.fb a {
-    color: #0078ff;
-}
-
 
 @media screen and (max-width: 425px) {
     header { padding: 1rem 0 1rem; border-bottom: 6px solid #11da8d; }

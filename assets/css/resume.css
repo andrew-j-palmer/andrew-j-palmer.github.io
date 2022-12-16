@@ -17,6 +17,7 @@ a:hover {
     position: absolute;
     top: 0;
     right: 0;
+    text-align: end;
 }
 
 .Contactinfo {
